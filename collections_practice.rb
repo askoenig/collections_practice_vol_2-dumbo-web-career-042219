@@ -48,4 +48,14 @@ def merge_data(keys, data)
   end
 end
   
-  # expected: [{:awesomeness=>10, :first_name=>"blake", :height=>"74", :last_name=>"johnson", :motto=>"Have a koala...:first_name=>"ashley", :height=>60, :last_name=>"dubs", :motto=>"I dub thee, 'Lady Brett Ashley'."}]
+def find_cool(cool_hash)
+  new_array = []
+  cool_hash.each do |attr_hash|
+    attr_hash.each do |item, description|
+      if description == "cool"
+        new_array.push(attr_hash)
+      end
+    end
+  end
+  new_array
+end
