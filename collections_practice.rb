@@ -17,7 +17,24 @@ end
   
   
 def remove_non_strings(array)
+  array.keep_if { |obj| obj.is_a? String}
 end
+  
+  
+def count_elements(array)
+  new_array = []
+  counts = Hash.new 0
+  array.each do |objects|
+    objects.each do |key, value|
+      counts[value] += 1
+    end
+  end
+  counts.each do |name, count|
+    new_array << {name: name, count: count}
+  end
+  new_array
+end
+
   
   
   
