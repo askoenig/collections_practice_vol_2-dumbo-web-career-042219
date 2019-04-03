@@ -35,6 +35,17 @@ def count_elements(array)
   new_array
 end
 
+
+def merge_data(keys, data)
+  data[0].map do |name, stats_hash|
+    merged_hash = {}
+    keys.each do |attr_hash|
+      if attr_hash[:first_name] == name
+        merged_hash = stats_hash.merge(attr_hash)
+      end
+    end
+    merged_hash
+  end
+end
   
-  
-  
+  # expected: [{:awesomeness=>10, :first_name=>"blake", :height=>"74", :last_name=>"johnson", :motto=>"Have a koala...:first_name=>"ashley", :height=>60, :last_name=>"dubs", :motto=>"I dub thee, 'Lady Brett Ashley'."}]
