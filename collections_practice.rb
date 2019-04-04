@@ -59,3 +59,8 @@ def find_cool(cool_hash)
   end
   new_array
 end
+
+
+def organize_schools(schools)
+  binding.pry
+end
