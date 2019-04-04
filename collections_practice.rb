@@ -61,7 +61,6 @@ def find_cool(cool_hash)
 end
 
 
-def organize_schools(schools)
 def organize_schools(school_hash)
   organized_hash = {}
   school_hash.each do |school_name, location_hash|
@@ -80,7 +79,7 @@ def organize_schools(school_hash)
   end
   organized_hash
 end
-end
+
 
 
 
